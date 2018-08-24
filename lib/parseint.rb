@@ -15,7 +15,8 @@ class ParseInt
       'zero' => 0,
     }.freeze
   end
+
   def parse_int(string)
-    return @SINGLE_DIGITS[string]
+    @SINGLE_DIGITS[string]
   end
 end
