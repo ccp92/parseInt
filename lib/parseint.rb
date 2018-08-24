@@ -1,16 +1,21 @@
 # frozen_string_literal: true
 
 class ParseInt
+  def initialize
+    @SINGLE_DIGITS = {
+      'one' => 1,
+      'two' => 2,
+      'three' => 3,
+      'four' => 4,
+      'five' => 5,
+      'six' => 6,
+      'seven' => 7,
+      'eight' => 8,
+      'nine' => 9,
+      'zero' => 0,
+    }.freeze
+  end
   def parse_int(string)
-    return 1 if string == 'one'
-    return 2 if string == 'two'
-    return 3 if string == 'three'
-    return 4 if string == 'four'
-    return 5 if string == 'five'
-    return 6 if string == 'six'
-    return 7 if string == 'seven'
-    return 8 if string == 'eight'
-    return 9 if string == 'nine'
-    0
+    return @SINGLE_DIGITS[string]
   end
 end
