@@ -135,6 +135,52 @@ describe ParseInt do
           end
         end
       end
+
+      context '30 to 39' do
+        context 'unique numbers' do
+          it 'converts thirty to 30' do
+            convert('thirty', 30)
+          end
+        end
+
+        context 'non-unique numbers' do
+          it 'converts thirtyone to 31' do
+            convert('thirtyone', 31)
+          end
+
+          it 'converts thirtytwo to 32' do
+            convert('thirtytwo', 32)
+          end
+
+          it 'converts twentythree to 23' do
+            convert('thirtythree', 33)
+          end
+
+          it 'converts twentyfour to 24' do
+            convert('thirtyfour', 34)
+          end
+
+          it 'converts twentyfive to 25' do
+            convert('thirtyfive', 35)
+          end
+
+          it 'converts twentysix to 26' do
+            convert('thirtysix', 36)
+          end
+
+          it 'converts twentyseven to 27' do
+            convert('thirtyseven', 37)
+          end
+
+          it 'converts twentyeight to 28' do
+            convert('thirtyeight', 38)
+          end
+
+          it 'converts twentynine to 29' do
+            convert('thirtynine', 39)
+          end
+        end
+      end
     end
   end
 
