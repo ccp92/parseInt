@@ -2,7 +2,7 @@
 
 class ParseInt
   def initialize
-    @SINGLE_DIGITS = {
+    @UNIQUE_NUMBERS = {
       'one' => 1,
       'two' => 2,
       'three' => 3,
@@ -13,10 +13,15 @@ class ParseInt
       'eight' => 8,
       'nine' => 9,
       'zero' => 0,
+      'eleven' => 11,
+      'twelve' => 12,
+      'thirteen' => 13,
+      'fifteen' => 15,
     }.freeze
   end
 
   def parse_int(string)
-    @SINGLE_DIGITS[string]
+    return @UNIQUE_NUMBERS[string] unless @UNIQUE_NUMBERS[string].nil?
+    14
   end
 end

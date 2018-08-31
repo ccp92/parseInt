@@ -46,6 +46,33 @@ describe ParseInt do
         convert('zero', 0)
       end
     end
+
+    context 'double digit conversions' do
+      context '11 to 19' do
+        context 'unique numbers' do
+          it 'can convert eleven to 11' do
+            convert('eleven', 11)
+          end
+
+          it 'can convert twelve to 12' do
+            convert('twelve', 12)
+          end
+
+          it 'can convert thirteen to 13' do
+            convert('thirteen', 13)
+          end
+
+          it 'can convert fifteen to 15' do
+            convert('fifteen', 15)
+          end
+        end
+        context 'built numbers' do
+          it 'can convert fourteen to 14' do
+            convert('fourteen', 14)
+          end
+        end
+      end
+    end
   end
 
   private
