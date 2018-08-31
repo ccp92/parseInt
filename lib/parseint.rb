@@ -27,11 +27,11 @@ class ParseInt
     if string.include?('teen')
       unfrozen_string = string.dup
       unfrozen_string.slice!('teen')
-      return 10 + @UNIQUE_NUMBERS[unfrozen_string]
+      return "1#{@UNIQUE_NUMBERS[unfrozen_string]}".to_i
     elsif string.include?('twenty')
       unfrozen_string = string.dup
       unfrozen_string.slice!('twenty')
-      return 20 + @UNIQUE_NUMBERS[unfrozen_string]
+      return "2#{@UNIQUE_NUMBERS[unfrozen_string]}".to_i
     end
   end
 end
