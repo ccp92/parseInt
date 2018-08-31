@@ -25,16 +25,15 @@ class ParseInt
 
   def parse_int(string)
     return @UNIQUE_NUMBERS[string] unless @UNIQUE_NUMBERS[string].nil?
+    unfrozen_string = string.dup
+    unfrozen_string.slice!('-')
     if string.include?('teen')
-      unfrozen_string = string.dup
       unfrozen_string.slice!('teen')
       return "1#{@UNIQUE_NUMBERS[unfrozen_string]}".to_i
     elsif string.include?('twenty')
-      unfrozen_string = string.dup
       unfrozen_string.slice!('twenty')
       return "2#{@UNIQUE_NUMBERS[unfrozen_string]}".to_i
     elsif string.include?('thirty')
-      unfrozen_string = string.dup
       unfrozen_string.slice!('thirty')
       return "3#{@UNIQUE_NUMBERS[unfrozen_string]}".to_i
     end

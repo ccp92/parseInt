@@ -5,6 +5,11 @@ require 'parseint'
 describe ParseInt do
   let(:parseint) { ParseInt.new }
   describe '.parse_int' do
+    context 'edge cases' do
+      it 'can convert twenty-three to 23' do
+        convert('twenty-three', 23)
+      end
+    end
     context 'single digit conversions' do
       it 'can convert to 1' do
         convert('one', 1)
