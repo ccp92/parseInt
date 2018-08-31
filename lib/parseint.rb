@@ -18,6 +18,7 @@ class ParseInt
       'thirteen' => 13,
       'fifteen' => 15,
       'eighteen' => 18,
+      'twenty' => 20,
     }.freeze
   end
 
@@ -27,6 +28,10 @@ class ParseInt
       unfrozen_string = string.dup
       unfrozen_string.slice!('teen')
       return 10 + @UNIQUE_NUMBERS[unfrozen_string]
+    elsif string.include?('twenty')
+      unfrozen_string = string.dup
+      unfrozen_string.slice!('twenty')
+      return 20 + @UNIQUE_NUMBERS[unfrozen_string]
     end
   end
 end

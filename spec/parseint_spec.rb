@@ -70,6 +70,7 @@ describe ParseInt do
             convert('eighteen', 18)
           end
         end
+
         context 'non-unique numbers' do
           it 'can convert fourteen to 14' do
             convert('fourteen', 14)
@@ -85,6 +86,52 @@ describe ParseInt do
 
           it 'can convert nineteen to 19' do
             convert('nineteen', 19)
+          end
+        end
+      end
+
+      context '20 to 29' do
+        context 'unique numbers' do
+          it 'converts twenty to 20' do
+            convert('twenty', 20)
+          end
+        end
+
+        context 'non-unique numbers' do
+          it 'converts twentyone to 21' do
+            convert('twentyone', 21)
+          end
+
+          it 'converts twentytwo to 22' do
+            convert('twentytwo', 22)
+          end
+
+          it 'converts twentythree to 23' do
+            convert('twentythree', 23)
+          end
+
+          it 'converts twentyfour to 24' do
+            convert('twentyfour', 24)
+          end
+
+          it 'converts twentyfive to 25' do
+            convert('twentyfive', 25)
+          end
+
+          it 'converts twentysix to 26' do
+            convert('twentysix', 26)
+          end
+
+          it 'converts twentyseven to 27' do
+            convert('twentyseven', 27)
+          end
+
+          it 'converts twentyeight to 28' do
+            convert('twentyeight', 28)
+          end
+
+          it 'converts twentynine to 29' do
+            convert('twentynine', 29)
           end
         end
       end
