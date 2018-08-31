@@ -65,10 +65,26 @@ describe ParseInt do
           it 'can convert fifteen to 15' do
             convert('fifteen', 15)
           end
+
+          it 'can convert eighteen to 18' do
+            convert('eighteen', 18)
+          end
         end
-        context 'built numbers' do
+        context 'non-unique numbers' do
           it 'can convert fourteen to 14' do
             convert('fourteen', 14)
+          end
+
+          it 'can convert sixteen to 16' do
+            convert('sixteen', 16)
+          end
+
+          it 'can convert seventeen to 17' do
+            convert('seventeen', 17)
+          end
+
+          it 'can convert nineteen to 19' do
+            convert('nineteen', 19)
           end
         end
       end

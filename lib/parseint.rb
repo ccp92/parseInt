@@ -17,11 +17,16 @@ class ParseInt
       'twelve' => 12,
       'thirteen' => 13,
       'fifteen' => 15,
+      'eighteen' => 18,
     }.freeze
   end
 
   def parse_int(string)
     return @UNIQUE_NUMBERS[string] unless @UNIQUE_NUMBERS[string].nil?
-    14
+    if string.include?('teen')
+      unfrozen_string = string.dup
+      unfrozen_string.slice!('teen')
+      return 10 + @UNIQUE_NUMBERS[unfrozen_string]
+    end
   end
 end
